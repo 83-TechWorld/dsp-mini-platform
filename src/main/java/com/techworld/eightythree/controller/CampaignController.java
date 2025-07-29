@@ -21,7 +21,7 @@ public class CampaignController {
     @MutationMapping
     public Campaign createCampaign(@Argument CampaignInput input) {
         Targeting targeting = new Targeting(input.getTargeting().getCountry(), input.getTargeting().getDevice());
-        Campaign campaign = new Campaign(null, input.getName(), input.getDailyBudjet(), targeting);
+        Campaign campaign = new Campaign(null, input.getName(), input.getBudget(), targeting);
         return campaignRepository.save(campaign);
     }
 

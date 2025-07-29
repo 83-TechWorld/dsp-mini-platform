@@ -6,7 +6,7 @@ type Targeting{
 type Campaign{
     id: ID!
     name: String!
-    dailyBudjet: Float!
+    budget: Float!
     targeting: Targeting!
 }
 
@@ -17,7 +17,7 @@ input TargetingInput {
 
 input CampaignInput {
     name: String!
-    dailyBudget: Float!
+    budget: Float!
     targeting: TargetingInput!
 }
 

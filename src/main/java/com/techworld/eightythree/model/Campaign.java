@@ -14,6 +14,6 @@ public class Campaign {
     @Id
     private String id;
     private String name;
-    private double dailyBudjet;
+    private double budget;
     private Targeting targeting;
 }

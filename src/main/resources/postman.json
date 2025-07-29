@@ -1,0 +1,24 @@
+// mutation
+mutation CreateCampaign($input: CampaignInput!) {
+createCampaign(input: $input) {
+id
+name
+budget
+targeting {
+country
+device
+}
+}
+}
+
+//variables
+{
+"input": {
+"name": "83 HT Ads",
+"budget": 1000.00,
+"targeting": {
+"country": "INDIA",
+"device": "Helper devices"
+}
+}
+}

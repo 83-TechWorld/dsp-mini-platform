@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class CampaignInput {
     private String name;
-    private double dailyBudjet;
+    private double budget;
     private TargetingInput targeting;
 }
