@@ -1,0 +1,31 @@
+type Targeting{
+    country: String
+    device: String
+}
+
+type Campaign{
+    id: ID!
+    name: String!
+    dailyBudjet: Float!
+    targeting: Targeting!
+}
+
+input TargetingInput {
+    country: String
+    device: String
+}
+
+input CampaignInput {
+    name: String!
+    dailyBudget: Float!
+    targeting: TargetingInput!
+}
+
+
+type Mutation {
+    createCampaign(input: CampaignInput!): Campaign
+}
+
+type Query {
+    allCampaigns: [Campaign]
+}
